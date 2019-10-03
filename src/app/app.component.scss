@@ -1,0 +1,71 @@
+// input[type=number] {
+//     border: none;
+//     border-bottom: 4px solid #8842d5;  
+//  }
+
+.emailer-background{
+    background-color: #eee;
+    padding:10px; 
+
+
+}
+
+.email-container{
+    max-width: 480px;
+height: 800px;
+background: #fff;
+font-family: sans-serif;
+margin: 0 auto;
+overflow: hidden;
+border-radius: 5px;
+text-align: center;
+border:1px solid #ccc;
+
+
+}
+
+input[type=number] {
+    color: #000;
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: none;
+border-bottom: 2px solid #8842d5;
+}
+
+.header{
+background-color: #a662ff;
+padding:10px; 
+font-size:18px;
+text-align: center;
+font-weight: 600;
+}
+.centermd{
+display: flex;
+justify-content: center;
+}
+
+.cta {
+
+margin: 20px;
+display: inline-block;
+}
+
+div.cta a {
+display: inline-block;
+background: #a662ff;
+text-decoration: none;
+border-radius: 5px;
+color:#000;
+border: solid 1px;
+padding: 10px;
+width: 135px;
+box-shadow: 1px 1px 1px 1px;
+
+
+}
+.cta a:hover{
+
+background:(riight to #aaffcc  #aabbdd);
+}

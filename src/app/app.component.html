@@ -1,0 +1,105 @@
+<!-- <div style="text-align:center">
+    <h1>Calculator</h1>  
+  <form [formGroup]="CalculatorForm" >
+         
+		<div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="inputPassWord">Password  </label>
+            <input type="number" class="form-control" (keyup)="FirstVal($event)" name="password" id="inputPassWord" formControlName="FirstVal" placeholder="Password">
+            
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-12">
+        <div class="form-group">
+          <label for="inputRePassWord">Confirm Password</label>
+          <input type="number" class="form-control" (keyup)="SecondVal($event)" name="confirmpassword"id="inputRePassWord"  formControlName="SecondVal"  placeholder="Confirm Password">
+        
+        </div>
+        </div>
+      </div>
+    </form>
+  <br>
+  <app-addition></app-addition>
+  <app-division></app-division>
+  <app-mulitiplication></app-mulitiplication>
+  <app-substraction></app-substraction><br><br>
+
+  Result:
+</div>
+
+ -->
+
+<div class="emailer-background">
+  <div class="email-container">
+    <div class="header">Calculator</div>
+    <form [formGroup]="CalculatorForm">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <input type="number" class="form-control" (keyup)="FirstVal($event)" name="firstval" id="firstval"
+              formControlName="FirstVal" placeholder="Enter Value 1">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12">
+          <div class="form-group">
+            <input type="number" class="form-control" (keyup)="SecondVal($event)" name="secondval"id="secondval"  formControlName="SecondVal"  placeholder="Enter Value 2">
+            <span style="color:red" *ngIf="flag == true">{{message}}</span>
+          </div>
+          </div>
+        </div>
+    </form>
+    <div class="">
+      <div class="row centermd">
+        <div class="col-md-3 cta">
+          <a (click)="add()">
+            <h3>+</h3>
+            <app-addition></app-addition>
+
+          </a>
+        </div>
+        <div class="col-md-3 cta">
+          <a (click)="sub()">
+            <h3>-</h3>
+            <app-substraction></app-substraction>
+
+          </a>
+        </div>
+      </div>
+      <div class="row centermd">
+        <div class="col-md-3 cta">
+          <a (click)="multiplybtn()">
+            <h3>x </h3><app-mulitiplication></app-mulitiplication>
+          </a>
+        </div>
+        <div class="col-md-3 cta">
+          <a (click)="Dividebtn()">
+            <h3>% </h3> Division
+          </a>
+        </div>
+      </div>
+      <div class="row centermd">
+        <div class="col-md-3 cta">
+          <a href="#">
+            Result
+          </a>
+        </div>
+      </div>
+      <!-- <form> -->
+      <label for="result">Result: {{result}}</label>
+      <input readOnly type="number" id="fname" name="fname" placeholder="Result" [(ngModel)]="result">
+
+
+      <!-- </form> -->
+    </div>
+  </div>
+
+
+
+
+</div>
